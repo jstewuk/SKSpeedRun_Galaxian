@@ -14,6 +14,8 @@
 		386DA66319A93D9900C2C4D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386DA66119A93D9900C2C4D7 /* Main.storyboard */; };
 		386DA66519A93D9900C2C4D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 386DA66419A93D9900C2C4D7 /* Images.xcassets */; };
 		386DA67119A93D9900C2C4D7 /* SKSpeedRunJAS1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA67019A93D9900C2C4D7 /* SKSpeedRunJAS1Tests.swift */; };
+		386DA67C19A93F5A00C2C4D7 /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386DA67A19A93F5A00C2C4D7 /* Starfield.sks */; };
+		386DA67D19A93F5A00C2C4D7 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 386DA67B19A93F5A00C2C4D7 /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		386DA66A19A93D9900C2C4D7 /* SKSpeedRunJAS1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKSpeedRunJAS1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		386DA66F19A93D9900C2C4D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		386DA67019A93D9900C2C4D7 /* SKSpeedRunJAS1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKSpeedRunJAS1Tests.swift; sourceTree = "<group>"; };
+		386DA67A19A93F5A00C2C4D7 /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
+		386DA67B19A93F5A00C2C4D7 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 				386DA65919A93D9900C2C4D7 /* AppDelegate.swift */,
 				386DA65B19A93D9900C2C4D7 /* GameScene.sks */,
 				386DA65D19A93D9900C2C4D7 /* GameScene.swift */,
+				386DA67A19A93F5A00C2C4D7 /* Starfield.sks */,
+				386DA67B19A93F5A00C2C4D7 /* spark.png */,
 				386DA65F19A93D9900C2C4D7 /* GameViewController.swift */,
 				386DA66119A93D9900C2C4D7 /* Main.storyboard */,
 				386DA66419A93D9900C2C4D7 /* Images.xcassets */,
@@ -195,8 +201,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				386DA67D19A93F5A00C2C4D7 /* spark.png in Resources */,
 				386DA66519A93D9900C2C4D7 /* Images.xcassets in Resources */,
 				386DA65C19A93D9900C2C4D7 /* GameScene.sks in Resources */,
+				386DA67C19A93F5A00C2C4D7 /* Starfield.sks in Resources */,
 				386DA66319A93D9900C2C4D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
