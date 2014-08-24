@@ -7,15 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3823595B19A9410200610AD7 /* SoundAssets in Resources */ = {isa = PBXBuildFile; fileRef = 3823595A19A9410200610AD7 /* SoundAssets */; };
+		3823595F19A941C300610AD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3823595E19A941C300610AD7 /* Images.xcassets */; };
+		3823596119A941D300610AD7 /* SpriteTextures.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3823596019A941D300610AD7 /* SpriteTextures.xcassets */; };
+		3823596319A942A200610AD7 /* GameSceneiOSExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3823596219A942A200610AD7 /* GameSceneiOSExtensions.swift */; };
+		384B3E5419AA20460018D49A /* GameSceneOSXExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384B3E5319AA20460018D49A /* GameSceneOSXExtensions.swift */; };
+		38668E9319AA1E7F00B2813C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3823595E19A941C300610AD7 /* Images.xcassets */; };
+		38668E9419AA1E8700B2813C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA65D19A93D9900C2C4D7 /* GameScene.swift */; };
+		38668E9519AA1E9C00B2813C /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386DA67A19A93F5A00C2C4D7 /* Starfield.sks */; };
+		38668E9619AA1F4000B2813C /* SpriteTextures.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3823596019A941D300610AD7 /* SpriteTextures.xcassets */; };
+		38668E9719AA1F5100B2813C /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 386DA67B19A93F5A00C2C4D7 /* spark.png */; };
+		38668E9819AA1F5A00B2813C /* SoundAssets in Resources */ = {isa = PBXBuildFile; fileRef = 3823595A19A9410200610AD7 /* SoundAssets */; };
 		386DA65A19A93D9900C2C4D7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA65919A93D9900C2C4D7 /* AppDelegate.swift */; };
 		386DA65C19A93D9900C2C4D7 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386DA65B19A93D9900C2C4D7 /* GameScene.sks */; };
 		386DA65E19A93D9900C2C4D7 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA65D19A93D9900C2C4D7 /* GameScene.swift */; };
 		386DA66019A93D9900C2C4D7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA65F19A93D9900C2C4D7 /* GameViewController.swift */; };
 		386DA66319A93D9900C2C4D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 386DA66119A93D9900C2C4D7 /* Main.storyboard */; };
-		386DA66519A93D9900C2C4D7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 386DA66419A93D9900C2C4D7 /* Images.xcassets */; };
 		386DA67119A93D9900C2C4D7 /* SKSpeedRunJAS1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386DA67019A93D9900C2C4D7 /* SKSpeedRunJAS1Tests.swift */; };
 		386DA67C19A93F5A00C2C4D7 /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = 386DA67A19A93F5A00C2C4D7 /* Starfield.sks */; };
 		386DA67D19A93F5A00C2C4D7 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 386DA67B19A93F5A00C2C4D7 /* spark.png */; };
+		38BE212119AA1D2800BB5D47 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE212019AA1D2800BB5D47 /* main.swift */; };
+		38BE212319AA1D2800BB5D47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE212219AA1D2800BB5D47 /* AppDelegate.swift */; };
+		38BE212719AA1D2800BB5D47 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 38BE212619AA1D2800BB5D47 /* GameScene.sks */; };
+		38BE212C19AA1D2800BB5D47 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38BE212A19AA1D2800BB5D47 /* MainMenu.xib */; };
+		38BE213819AA1D2800BB5D47 /* SKMacSpeedRunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38BE213719AA1D2800BB5D47 /* SKMacSpeedRunTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +41,21 @@
 			remoteGlobalIDString = 386DA65319A93D9900C2C4D7;
 			remoteInfo = SKSpeedRunJAS1;
 		};
+		38BE213219AA1D2800BB5D47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 386DA64C19A93D9900C2C4D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38BE211B19AA1D2800BB5D47;
+			remoteInfo = SKMacSpeedRun;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3823595A19A9410200610AD7 /* SoundAssets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SoundAssets; sourceTree = "<group>"; };
+		3823595E19A941C300610AD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3823596019A941D300610AD7 /* SpriteTextures.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SpriteTextures.xcassets; sourceTree = "<group>"; };
+		3823596219A942A200610AD7 /* GameSceneiOSExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GameSceneiOSExtensions.swift; path = ../GameSceneiOSExtensions.swift; sourceTree = "<group>"; };
+		384B3E5319AA20460018D49A /* GameSceneOSXExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSceneOSXExtensions.swift; sourceTree = "<group>"; };
 		386DA65419A93D9900C2C4D7 /* SKSpeedRunJAS1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKSpeedRunJAS1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386DA65819A93D9900C2C4D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		386DA65919A93D9900C2C4D7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,12 +63,20 @@
 		386DA65D19A93D9900C2C4D7 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		386DA65F19A93D9900C2C4D7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		386DA66219A93D9900C2C4D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		386DA66419A93D9900C2C4D7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		386DA66A19A93D9900C2C4D7 /* SKSpeedRunJAS1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKSpeedRunJAS1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		386DA66F19A93D9900C2C4D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		386DA67019A93D9900C2C4D7 /* SKSpeedRunJAS1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKSpeedRunJAS1Tests.swift; sourceTree = "<group>"; };
 		386DA67A19A93F5A00C2C4D7 /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
 		386DA67B19A93F5A00C2C4D7 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		38BE211C19AA1D2800BB5D47 /* SKMacSpeedRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKMacSpeedRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38BE211F19AA1D2800BB5D47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38BE212019AA1D2800BB5D47 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		38BE212219AA1D2800BB5D47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38BE212619AA1D2800BB5D47 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		38BE212B19AA1D2800BB5D47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		38BE213119AA1D2800BB5D47 /* SKMacSpeedRunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKMacSpeedRunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38BE213619AA1D2800BB5D47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38BE213719AA1D2800BB5D47 /* SKMacSpeedRunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKMacSpeedRunTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +94,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		38BE211919AA1D2800BB5D47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38BE212E19AA1D2800BB5D47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -67,6 +116,8 @@
 			children = (
 				386DA65619A93D9900C2C4D7 /* SKSpeedRunJAS1 */,
 				386DA66D19A93D9900C2C4D7 /* SKSpeedRunJAS1Tests */,
+				38BE211D19AA1D2800BB5D47 /* SKMacSpeedRun */,
+				38BE213419AA1D2800BB5D47 /* SKMacSpeedRunTests */,
 				386DA65519A93D9900C2C4D7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +127,8 @@
 			children = (
 				386DA65419A93D9900C2C4D7 /* SKSpeedRunJAS1.app */,
 				386DA66A19A93D9900C2C4D7 /* SKSpeedRunJAS1Tests.xctest */,
+				38BE211C19AA1D2800BB5D47 /* SKMacSpeedRun.app */,
+				38BE213119AA1D2800BB5D47 /* SKMacSpeedRunTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,11 +139,14 @@
 				386DA65919A93D9900C2C4D7 /* AppDelegate.swift */,
 				386DA65B19A93D9900C2C4D7 /* GameScene.sks */,
 				386DA65D19A93D9900C2C4D7 /* GameScene.swift */,
+				3823596219A942A200610AD7 /* GameSceneiOSExtensions.swift */,
 				386DA67A19A93F5A00C2C4D7 /* Starfield.sks */,
 				386DA67B19A93F5A00C2C4D7 /* spark.png */,
 				386DA65F19A93D9900C2C4D7 /* GameViewController.swift */,
 				386DA66119A93D9900C2C4D7 /* Main.storyboard */,
-				386DA66419A93D9900C2C4D7 /* Images.xcassets */,
+				3823595E19A941C300610AD7 /* Images.xcassets */,
+				3823596019A941D300610AD7 /* SpriteTextures.xcassets */,
+				3823595A19A9410200610AD7 /* SoundAssets */,
 				386DA65719A93D9900C2C4D7 /* Supporting Files */,
 			);
 			path = SKSpeedRunJAS1;
@@ -117,6 +173,44 @@
 			isa = PBXGroup;
 			children = (
 				386DA66F19A93D9900C2C4D7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38BE211D19AA1D2800BB5D47 /* SKMacSpeedRun */ = {
+			isa = PBXGroup;
+			children = (
+				38BE212219AA1D2800BB5D47 /* AppDelegate.swift */,
+				38BE212619AA1D2800BB5D47 /* GameScene.sks */,
+				38BE212A19AA1D2800BB5D47 /* MainMenu.xib */,
+				38BE211E19AA1D2800BB5D47 /* Supporting Files */,
+				384B3E5319AA20460018D49A /* GameSceneOSXExtensions.swift */,
+			);
+			path = SKMacSpeedRun;
+			sourceTree = "<group>";
+		};
+		38BE211E19AA1D2800BB5D47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38BE211F19AA1D2800BB5D47 /* Info.plist */,
+				38BE212019AA1D2800BB5D47 /* main.swift */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38BE213419AA1D2800BB5D47 /* SKMacSpeedRunTests */ = {
+			isa = PBXGroup;
+			children = (
+				38BE213719AA1D2800BB5D47 /* SKMacSpeedRunTests.swift */,
+				38BE213519AA1D2800BB5D47 /* Supporting Files */,
+			);
+			path = SKMacSpeedRunTests;
+			sourceTree = "<group>";
+		};
+		38BE213519AA1D2800BB5D47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38BE213619AA1D2800BB5D47 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -159,6 +253,41 @@
 			productReference = 386DA66A19A93D9900C2C4D7 /* SKSpeedRunJAS1Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		38BE211B19AA1D2800BB5D47 /* SKMacSpeedRun */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38BE213D19AA1D2900BB5D47 /* Build configuration list for PBXNativeTarget "SKMacSpeedRun" */;
+			buildPhases = (
+				38BE211819AA1D2800BB5D47 /* Sources */,
+				38BE211919AA1D2800BB5D47 /* Frameworks */,
+				38BE211A19AA1D2800BB5D47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SKMacSpeedRun;
+			productName = SKMacSpeedRun;
+			productReference = 38BE211C19AA1D2800BB5D47 /* SKMacSpeedRun.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38BE213019AA1D2800BB5D47 /* SKMacSpeedRunTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38BE213E19AA1D2900BB5D47 /* Build configuration list for PBXNativeTarget "SKMacSpeedRunTests" */;
+			buildPhases = (
+				38BE212D19AA1D2800BB5D47 /* Sources */,
+				38BE212E19AA1D2800BB5D47 /* Frameworks */,
+				38BE212F19AA1D2800BB5D47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38BE213319AA1D2800BB5D47 /* PBXTargetDependency */,
+			);
+			name = SKMacSpeedRunTests;
+			productName = SKMacSpeedRunTests;
+			productReference = 38BE213119AA1D2800BB5D47 /* SKMacSpeedRunTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -174,6 +303,13 @@
 					386DA66919A93D9900C2C4D7 = {
 						CreatedOnToolsVersion = 6.0;
 						TestTargetID = 386DA65319A93D9900C2C4D7;
+					};
+					38BE211B19AA1D2800BB5D47 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					38BE213019AA1D2800BB5D47 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 38BE211B19AA1D2800BB5D47;
 					};
 				};
 			};
@@ -192,6 +328,8 @@
 			targets = (
 				386DA65319A93D9900C2C4D7 /* SKSpeedRunJAS1 */,
 				386DA66919A93D9900C2C4D7 /* SKSpeedRunJAS1Tests */,
+				38BE211B19AA1D2800BB5D47 /* SKMacSpeedRun */,
+				38BE213019AA1D2800BB5D47 /* SKMacSpeedRunTests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,14 +340,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				386DA67D19A93F5A00C2C4D7 /* spark.png in Resources */,
-				386DA66519A93D9900C2C4D7 /* Images.xcassets in Resources */,
+				3823595B19A9410200610AD7 /* SoundAssets in Resources */,
 				386DA65C19A93D9900C2C4D7 /* GameScene.sks in Resources */,
+				3823595F19A941C300610AD7 /* Images.xcassets in Resources */,
 				386DA67C19A93F5A00C2C4D7 /* Starfield.sks in Resources */,
+				3823596119A941D300610AD7 /* SpriteTextures.xcassets in Resources */,
 				386DA66319A93D9900C2C4D7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		386DA66819A93D9900C2C4D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38BE211A19AA1D2800BB5D47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38668E9819AA1F5A00B2813C /* SoundAssets in Resources */,
+				38668E9719AA1F5100B2813C /* spark.png in Resources */,
+				38668E9619AA1F4000B2813C /* SpriteTextures.xcassets in Resources */,
+				38668E9319AA1E7F00B2813C /* Images.xcassets in Resources */,
+				38BE212719AA1D2800BB5D47 /* GameScene.sks in Resources */,
+				38668E9519AA1E9C00B2813C /* Starfield.sks in Resources */,
+				38BE212C19AA1D2800BB5D47 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38BE212F19AA1D2800BB5D47 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -225,6 +386,7 @@
 			files = (
 				386DA65E19A93D9900C2C4D7 /* GameScene.swift in Sources */,
 				386DA66019A93D9900C2C4D7 /* GameViewController.swift in Sources */,
+				3823596319A942A200610AD7 /* GameSceneiOSExtensions.swift in Sources */,
 				386DA65A19A93D9900C2C4D7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +399,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		38BE211819AA1D2800BB5D47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38668E9419AA1E8700B2813C /* GameScene.swift in Sources */,
+				384B3E5419AA20460018D49A /* GameSceneOSXExtensions.swift in Sources */,
+				38BE212319AA1D2800BB5D47 /* AppDelegate.swift in Sources */,
+				38BE212119AA1D2800BB5D47 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38BE212D19AA1D2800BB5D47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38BE213819AA1D2800BB5D47 /* SKMacSpeedRunTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -244,6 +425,11 @@
 			isa = PBXTargetDependency;
 			target = 386DA65319A93D9900C2C4D7 /* SKSpeedRunJAS1 */;
 			targetProxy = 386DA66B19A93D9900C2C4D7 /* PBXContainerItemProxy */;
+		};
+		38BE213319AA1D2800BB5D47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38BE211B19AA1D2800BB5D47 /* SKMacSpeedRun */;
+			targetProxy = 38BE213219AA1D2800BB5D47 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -254,6 +440,14 @@
 				386DA66219A93D9900C2C4D7 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38BE212A19AA1D2800BB5D47 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38BE212B19AA1D2800BB5D47 /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -394,6 +588,80 @@
 			};
 			name = Release;
 		};
+		38BE213919AA1D2800BB5D47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SKMacSpeedRun/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		38BE213A19AA1D2800BB5D47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = SKMacSpeedRun/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		38BE213B19AA1D2800BB5D47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SKMacSpeedRunTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SKMacSpeedRun.app/Contents/MacOS/SKMacSpeedRun";
+			};
+			name = Debug;
+		};
+		38BE213C19AA1D2800BB5D47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SKMacSpeedRunTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SKMacSpeedRun.app/Contents/MacOS/SKMacSpeedRun";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -413,6 +681,7 @@
 				386DA67619A93D9900C2C4D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		386DA67719A93D9900C2C4D7 /* Build configuration list for PBXNativeTarget "SKSpeedRunJAS1Tests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +690,25 @@
 				386DA67919A93D9900C2C4D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38BE213D19AA1D2900BB5D47 /* Build configuration list for PBXNativeTarget "SKMacSpeedRun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38BE213919AA1D2800BB5D47 /* Debug */,
+				38BE213A19AA1D2800BB5D47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38BE213E19AA1D2900BB5D47 /* Build configuration list for PBXNativeTarget "SKMacSpeedRunTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38BE213B19AA1D2800BB5D47 /* Debug */,
+				38BE213C19AA1D2800BB5D47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

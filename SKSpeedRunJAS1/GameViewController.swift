@@ -15,7 +15,9 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
 
         /* Pick a size for the scene */
-        let scene = GameScene(fileNamed:"GameScene")
+//        let scene = GameScene(fileNamed:"GameScene")
+        let scene = GameScene(size: CGSizeMake(768, 1024))
+        scene.physicsWorld.gravity = CGVectorMake(0.0, -1)
         // Configure the view.
         let skView = self.view as SKView
         skView.showsFPS = true
