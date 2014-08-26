@@ -28,15 +28,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     var alienOffset = 0
     var gameStartTime :CFTimeInterval?
-    
+
     enum ColliderType: UInt32 {
         case PlayerShot = 0b0001
         case PlayerShip = 0b0010
         case AlienShot =  0b0100
         case AlienShip =  0b1000
     }
-    
-    var attackingAlienIndex: Int? = nil
+
     
 //MARK: - Overrides
     
@@ -55,11 +54,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // code execution starts
         self.physicsWorld.contactDelegate = self
-        self.backgroundColor = SKColor.blackColor()
+//        self.backgroundColor = SKColor.blackColor()
         preloadSounds()
         self.setupNodes()
     }
-    
+
+    var attackingAlienIndex: Int? = nil
+
     override func update(currentTime: CFTimeInterval) {
         // local funcs
         func updateShipPosition() {
@@ -74,13 +75,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         func updateAlienPositions(currentTime: CFTimeInterval) {
-            func positionForAlienAtIndex(i:Int) -> CGPoint {
-                let cols = 10
-                let x = 200 + i % cols * 47 + self.alienOffset
-                let y = 924 - i / cols * 43
-                return CGPointMake( CGFloat( x ), CGFloat( y ) )
-            }
-            
             if let gameStartTime = self.gameStartTime {
                 
                 let elapsedTime = (currentTime - gameStartTime)
@@ -107,7 +101,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         func handleAttacks() {
-            
+            // local funcs
             func startAttackRunForAlienAtIndex(i:Int) {
                 let alienNode = self.aliens[i]
                 if (alienNode.parent != nil) {
@@ -165,6 +159,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
             }
             
+            // execution...
             if let attackingAlienIndex = self.attackingAlienIndex {
                 handleAttackingAlien(attackingAlienIndex)
             } else {
@@ -183,9 +178,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func positionForAlienAtIndex(i:Int) -> CGPoint {
         let cols = 10
-        let x = 100 + i % cols * 47
+        let x = 200 + i % cols * 47 + self.alienOffset
         let y = 924 - i / cols * 43
-        return CGPointMake( CGFloat( x ), CGFloat( y ) )
+        return CGPointMake(CGFloat(x), CGFloat(y))
     }
 
 //MARK: - Setup
@@ -193,8 +188,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func setupNodes() {
         // local funcs
         func setupStarfield() {
-            let starfieldPath = NSBundle.mainBundle().pathForResource("Starfield", ofType: "sks")
-            let starfieldNode = NSKeyedUnarchiver.unarchiveObjectWithFile(starfieldPath!) as SKEmitterNode
+            // local funcs
+            func starfield() -> SKEmitterNode {
+                let node = SKEmitterNode()
+                node.particleTexture = SKTexture(imageNamed: "spark.png")
+                node.particleBirthRate = 25
+                node.particleLifetime = 5
+                node.particlePositionRange = CGVector(1000, 0)
+                node.emissionAngle = 270.0 * CGFloat(M_PI/180.0)
+                node.particleSpeed = 250
+                node.particleSpeedRange = 200
+                node.particleAlpha = 1
+                node.particleScale = 0.1
+                node.particleColorBlendFactor = 0.5
+                return node
+            }            // execution...
+            let starfieldNode = starfield()
             starfieldNode.position = CGPointMake( CGRectGetMidX(self.frame), CGRectGetHeight(self.frame))
             
             starfieldNode.particleColorSequence = nil
@@ -215,16 +224,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 shipNode.physicsBody.affectedByGravity = false
             }
             
-            
             shipNode.position = CGPointMake( CGRectGetMidX(self.frame), 50)
             shipNode.size = CGSizeMake( CGRectGetWidth( shipNode.frame ) * 2, CGRectGetHeight( shipNode.frame ) * 2 )
             
             let shipRange: SKRange = SKRange(lowerLimit: 50.0, upperLimit: 718.0)
             let shipConstraint = SKConstraint.positionX( shipRange )
-            
             shipNode.constraints = [shipConstraint!]
             
             setupPhysics(shipNode)
+            
             self.addChild(shipNode)
         }
         
@@ -245,7 +253,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         func setupAliens() {
-            // local functions
+            // local funcs
             func setupPhysics(alienSprite: SKSpriteNode) {
                 alienSprite.physicsBody = SKPhysicsBody(rectangleOfSize:alienSprite.size)
                 alienSprite.physicsBody.categoryBitMask = ColliderType.AlienShip.toRaw()
@@ -296,7 +304,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
 
         // execution...
-        if self.playerShot == nil && self.shipNode.parent != nil {
+        if (self.playerShot == nil) && (self.shipNode.parent != nil) {
             let playerShot = SKSpriteNode(color: SKColor.yellowColor(), size: CGSizeMake(3, 10))
             playerShot.position = CGPointMake( shipNode.position.x, shipNode.position.y - 15 )
             
@@ -361,7 +369,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let completeAction = SKAction.sequence([compoundAction!, removeAction!])
             
             shipNode.runAction(completeAction)
-            shipNode.physicsBody.categoryBitMask = 0
+//            shipNode.physicsBody.categoryBitMask = 0
             
             let gameOverNode = SKLabelNode(fontNamed: "Futura-CondensedExtraBold")
             gameOverNode.position = CGPointMake( CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
