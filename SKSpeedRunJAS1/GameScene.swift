@@ -90,7 +90,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 }
                 
                 for (index, alien) in enumerate( self.aliens ) {
-                    if index == self.attackingAlienIndex || alien.physicsBody.categoryBitMask == 0 {
+                    if index == self.attackingAlienIndex || alien.physicsBody!.categoryBitMask == 0 {
                         continue;
                     }
                     alien.position = positionForAlienAtIndex(index)
@@ -109,7 +109,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     let rotationAngle = CGFloat( isOnLeftSide ? -3.1415 : 3.1415 )
                     let soundEffectAction = SKAction.playSoundFileNamed("SoundAssets/flying.wav", waitForCompletion: false)
                     let rotateAction = SKAction.rotateByAngle(rotationAngle, duration: 1.0)
-                    let compoundAction = SKAction.group([soundEffectAction!, rotateAction!])
+                    let compoundAction = SKAction.group([soundEffectAction, rotateAction])
                     alienNode.runAction( compoundAction )
                     
                     if let physicsBody = alienNode.physicsBody {
@@ -129,10 +129,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     alienShotNode.position = CGPointMake(attackingAlienNode.position.x, attackingAlienNode.position.y - 10)
                     
                     alienShotNode.physicsBody = SKPhysicsBody(rectangleOfSize: alienShotNode.size)
-                    alienShotNode.physicsBody.categoryBitMask = ColliderType.AlienShot.toRaw()
-                    alienShotNode.physicsBody.velocity = CGVectorMake(attackingAlienNode.physicsBody.velocity.dx, -500)
-                    alienShotNode.physicsBody.affectedByGravity = false
-                    alienShotNode.physicsBody.collisionBitMask = 0
+                    alienShotNode.physicsBody!.categoryBitMask = ColliderType.AlienShot.toRaw()
+                    alienShotNode.physicsBody!.velocity = CGVectorMake(attackingAlienNode.physicsBody!.velocity.dx, -500)
+                    alienShotNode.physicsBody!.affectedByGravity = false
+                    alienShotNode.physicsBody!.collisionBitMask = 0
                     
                     self.addChild( alienShotNode )
                 }
@@ -142,16 +142,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 if ( attackingAlienNode.position.y < 0.0 ) || ( attackingAlienNode.parent == nil ) {
                     // put alien back in formation
-                    attackingAlienNode.physicsBody.velocity = CGVectorMake(0, 0)
+                    attackingAlienNode.physicsBody!.velocity = CGVectorMake(0, 0)
                     attackingAlienNode.position = self.positionForAlienAtIndex( attackingAlienIndex )
-                    attackingAlienNode.physicsBody.affectedByGravity = false
+                    attackingAlienNode.physicsBody!.affectedByGravity = false
                     attackingAlienNode.zRotation = 0
                     self.attackingAlienIndex = nil
                 } else {
                     // apply force toward center of screen
                     let isOnLeftSide = attackingAlienNode.position.x < ( self.frame.size.width / 2.0 )
                     let forceVector = CGVectorMake(isOnLeftSide ? 10: -10, 0)
-                    attackingAlienNode.physicsBody.applyForce(forceVector)
+                    attackingAlienNode.physicsBody!.applyForce(forceVector)
                     if ( arc4random() % 100 == 0 ) {
                         handleAlienShooting(attackingAlienNode)
                     }
@@ -218,10 +218,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             // local funcs
             func setupPhysics(shipNode: SKSpriteNode) {
                 shipNode.physicsBody = SKPhysicsBody(rectangleOfSize: shipNode.size)
-                shipNode.physicsBody.categoryBitMask = ColliderType.PlayerShip.toRaw()
-                shipNode.physicsBody.contactTestBitMask = ColliderType.AlienShip.toRaw() | ColliderType.AlienShot.toRaw()
-                shipNode.physicsBody.collisionBitMask = 0
-                shipNode.physicsBody.affectedByGravity = false
+                shipNode.physicsBody!.categoryBitMask = ColliderType.PlayerShip.toRaw()
+                shipNode.physicsBody!.contactTestBitMask = ColliderType.AlienShip.toRaw() | ColliderType.AlienShot.toRaw()
+                shipNode.physicsBody!.collisionBitMask = 0
+                shipNode.physicsBody!.affectedByGravity = false
             }
             
             shipNode.position = CGPointMake( CGRectGetMidX(self.frame), 50)
@@ -256,10 +256,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             // local funcs
             func setupPhysics(alienSprite: SKSpriteNode) {
                 alienSprite.physicsBody = SKPhysicsBody(rectangleOfSize:alienSprite.size)
-                alienSprite.physicsBody.categoryBitMask = ColliderType.AlienShip.toRaw()
-                alienSprite.physicsBody.contactTestBitMask = ColliderType.PlayerShot.toRaw() | ColliderType.PlayerShip.toRaw()
-                alienSprite.physicsBody.collisionBitMask = 0
-                alienSprite.physicsBody.affectedByGravity = false
+                alienSprite.physicsBody!.categoryBitMask = ColliderType.AlienShip.toRaw()
+                alienSprite.physicsBody!.contactTestBitMask = ColliderType.PlayerShot.toRaw() | ColliderType.PlayerShip.toRaw()
+                alienSprite.physicsBody!.collisionBitMask = 0
+                alienSprite.physicsBody!.affectedByGravity = false
             }
             
             // execution...
@@ -298,9 +298,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var setupPhysics : (playerShot: SKSpriteNode) -> Void
         setupPhysics = {(playerShot: SKSpriteNode) -> Void in
             playerShot.physicsBody = SKPhysicsBody(rectangleOfSize: playerShot.size)
-            playerShot.physicsBody.categoryBitMask = ColliderType.PlayerShot.toRaw()
-            playerShot.physicsBody.collisionBitMask = 0
-            playerShot.physicsBody.affectedByGravity = false;
+            playerShot.physicsBody!.categoryBitMask = ColliderType.PlayerShot.toRaw()
+            playerShot.physicsBody!.collisionBitMask = 0
+            playerShot.physicsBody!.affectedByGravity = false;
         }
 
         // execution...
@@ -314,9 +314,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 self.playerShot = nil
             }
             
-            let actionSequence = SKAction.sequence([moveAction!, removeBulletAction!])
+            let actionSequence = SKAction.sequence([moveAction, removeBulletAction])
             let soundAction = SKAction.playSoundFileNamed("SoundAssets/shot.wav", waitForCompletion: false)
-            let compoundAction = SKAction.group([actionSequence!, soundAction!])
+            let compoundAction = SKAction.group([actionSequence!, soundAction])
             
             setupPhysics(playerShot: playerShot)
             
@@ -343,11 +343,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let removeAction = SKAction.runBlock() {
                 alienNode.removeFromParent()
             }
-            let rotateAndFadeAction = SKAction.group([rotateAction!, scaleAction!, fadeAction!, soundEffectAction!])
-            let completeAction = SKAction.sequence([rotateAndFadeAction!, removeAction!])
+            let rotateAndFadeAction = SKAction.group([rotateAction, scaleAction, fadeAction, soundEffectAction])
+            let completeAction = SKAction.sequence([rotateAndFadeAction!, removeAction])
             
             alienNode.runAction(completeAction)
-            alienNode.physicsBody.affectedByGravity = true
+            alienNode.physicsBody!.affectedByGravity = true
             
             if let playerShot = self.playerShot {
                 playerShot.removeFromParent()
@@ -361,15 +361,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let explosionSoundAction = SKAction.playSoundFileNamed("SoundAssets/death.wav", waitForCompletion: false)
             let colorAnimationAction = SKAction.colorizeWithColor(SKColor.redColor(), colorBlendFactor: 1, duration: 0.5)
             let fadeAction = SKAction.fadeOutWithDuration(1)
-            let compoundAction = SKAction.group([explosionSoundAction!, colorAnimationAction!, fadeAction!])
+            let compoundAction = SKAction.group([explosionSoundAction, colorAnimationAction, fadeAction])
             let removeAction = SKAction.runBlock() {
                 self.shipNode.removeFromParent()
             }
             
-            let completeAction = SKAction.sequence([compoundAction!, removeAction!])
+            let completeAction = SKAction.sequence([compoundAction!, removeAction])
             
             shipNode.runAction(completeAction)
-//            shipNode.physicsBody.categoryBitMask = 0
+//            shipNode.physicsBody!.categoryBitMask = 0
             
             let gameOverNode = SKLabelNode(fontNamed: "Futura-CondensedExtraBold")
             gameOverNode.position = CGPointMake( CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
@@ -381,9 +381,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // execution...
         if contact.bodyA.categoryBitMask == ColliderType.AlienShip.toRaw() {
-            destroyAlien( contact.bodyA.node )
+            destroyAlien( contact.bodyA.node! )
         } else if contact.bodyB.categoryBitMask == ColliderType.AlienShip.toRaw() {
-            destroyAlien( contact.bodyB.node )
+            destroyAlien( contact.bodyB.node! )
         }
         
         if contact.bodyA.categoryBitMask == ColliderType.PlayerShip.toRaw() {
