@@ -25,7 +25,7 @@ extension GameScene {
 
     }
 
-    override func touchesEnded(touches: NSSet!, withEvent event: UIEvent!)  {
+    override func touchesEnded(touches: NSSet, withEvent event: UIEvent!)  {
         let touch : UITouch = touches.anyObject() as UITouch
         let x = touch.locationInNode(self).x
         switch x {
